@@ -40,7 +40,7 @@ function App() {
     variant: "neutral" as const
   })
   const [credits, setCredits] = useState<number>(999) // Unlimited credits
-  const [currentLanguage, setCurrentLanguage] = useState<string>("java")
+  const [currentLanguage, setCurrentLanguage] = useState<string>("python")
   const [isInitialized, setIsInitialized] = useState(false)
   const [hasApiKey, setHasApiKey] = useState(false)
   const [apiKeyDialogOpen, setApiKeyDialogOpen] = useState(false)
@@ -162,7 +162,7 @@ function App() {
         if (config && config.language) {
           updateLanguage(config.language)
         } else {
-          updateLanguage("java")
+          updateLanguage("python")
         }
         
         // Model settings are now managed through the settings dialog
@@ -172,7 +172,7 @@ function App() {
       } catch (error) {
         console.error("Failed to initialize app:", error)
         // Fallback to defaults
-        updateLanguage("java")
+        updateLanguage("python")
         markInitialized()
       }
     }

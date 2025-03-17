@@ -113,10 +113,10 @@ export class ProcessingHelper {
       }
       
       // Default fallback
-      return "java";
+      return "python";
     } catch (error) {
       console.error("Error getting language:", error)
-      return "java"
+      return "python"
     }
   }
 

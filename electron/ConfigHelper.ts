@@ -21,7 +21,7 @@ export class ConfigHelper extends EventEmitter {
     extractionModel: "gpt-4o",
     solutionModel: "gpt-4o",
     debuggingModel: "gpt-4o",
-    language: "java",
+    language: "python",
     opacity: 1.0
   };
 
@@ -193,7 +193,7 @@ export class ConfigHelper extends EventEmitter {
    */
   public getLanguage(): string {
     const config = this.loadConfig();
-    return config.language || "java";
+    return config.language || "python";
   }
 
   /**
